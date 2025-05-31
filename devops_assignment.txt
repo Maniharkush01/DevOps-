@@ -1,0 +1,190 @@
+1. Create a file, assign permissions, and change them using chmod 
+Ans - # Create a new file
+touch myfile.txt
+
+# Check permissions
+ls -l myfile.txt
+# Output: -rw-r--r--  (owner can read/write, group can read, others can read)
+
+# Change permissions to rwx for owner, r for group, and no permissions for others
+chmod 740 myfile.txt
+
+# Verify updated permissions
+ls -l myfile.txt
+# Output: -rwxr----- 
+
+2. Execute basic Linux commands 
+Ans- # List files in current directory
+
+# Change directory
+cd /path/to/directory
+
+# Create a directory
+mkdir new_folder
+
+# Remove a directory
+rm -r new_folder
+
+# Create a file
+touch file1.txt
+
+# Remove a file
+rm file1.txt
+
+
+ 3. Navigate directories, list files, move files
+Ans - # Navigate into directory
+cd ~/Documents
+
+# Go back one level
+cd ..
+
+# List files with details
+ls -l
+
+# Move a file to another location
+mv file1.txt /home/user/Desktop
+
+# Copy a file
+cp file1.txt file2.txt
+
+
+
+4. Create new user and group, set permissions, user management
+Ans- # Create new user
+sudo useradd devuser
+
+# Set password for user
+sudo passwd devuser
+
+# Create new group
+sudo groupadd devgroup
+
+# Add user to group
+sudo usermod -aG devgroup devuser
+
+# Delete user
+sudo userdel devuser
+
+# Delete group
+sudo groupdel devgroup
+
+
+
+
+5. Practice more Linux commands
+Ans- # Display current directory
+pwd
+
+# View file contents
+cat myfile.txt
+
+# View top of file
+head myfile.txt
+
+# View bottom of file
+tail myfile.txt
+
+
+
+
+6. Git basics: Installation, configuration, and commands
+Ans- # Git configuration
+git config --global user.name "Your Name"
+git config --global user.email "your@email.com"
+
+# Initialize a Git repo
+git init
+
+# Add file to staging
+git add readme.md
+
+# Commit changes
+git commit -m "Initial commit"
+
+# Check Git status
+git status
+
+# Check commit history
+git log
+
+
+
+7.Set up a remote repo, commit and push to master
+Ans- # Create a GitHub repo and copy remote URL
+git remote add origin https://github.com/yourusername/your-repo.git
+
+# Rename main branch
+git branch -M main
+
+# Push changes to GitHub
+git push -u origin main
+
+
+
+
+8. Merge types, branching, push and pull request
+Ans- # Create a new branch
+git checkout -b feature-branch
+
+# Make changes and commit
+echo "Hello" > hello.txt
+git add hello.txt
+git commit -m "Add hello.txt"
+
+# Push the branch
+git push origin feature-branch
+
+# On GitHub: Open Pull Request → Merge to main
+
+
+
+9.  Undo last commit or remove file from remote
+Ans- # Undo last commit but keep changes
+git reset --soft HEAD~1
+
+# Remove file and commit
+git rm unwanted.txt
+git commit -m "Remove unwanted.txt"
+git push
+
+
+
+10. Branching, merging, and resolving conflicts
+ANS- # Create and switch to a new branch
+git checkout -b bug-fix
+
+# After committing changes, merge into main
+git checkout main
+git merge bug-fix
+
+# If conflict occurs:
+# Open conflicting file, manually fix it
+# Then:
+git add .
+git commit -m "Resolved merge conflict"
+
+
+
+11. Practice more Git commands
+Ans- # Show current branch
+git branch
+
+# Delete a local branch
+git branch -d feature-branch
+
+# Clone a repo
+git clone https://github.com/yourusername/your-repo.git
+
+# Pull latest changes
+git pull origin main
+
+# Stash changes
+git stash
+git stash pop
+
+
+
+
+
+
